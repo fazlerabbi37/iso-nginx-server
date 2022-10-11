@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  iso-web:
+    image: nginx
+    volumes:
+    # - ./templates:/etc/nginx/templates
+    - ${ISO_DIR}:/usr/share/nginx/html:ro
+    ports:
+    - "80:80"
+
